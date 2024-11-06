@@ -1,6 +1,6 @@
 package com.example.user_service.controllers;
 
-import com.example.user_service.Constants.APIConstant;
+import com.example.user_service.constants.APIConstant;
 import com.example.user_service.models.User;
 import com.example.user_service.services.UserService;
 import org.springframework.http.ResponseEntity;

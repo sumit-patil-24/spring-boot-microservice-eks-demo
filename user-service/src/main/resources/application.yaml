@@ -24,3 +24,10 @@ springdoc:
     path: /user-service/swagger-ui.html
     operationsSorter: alpha
     tagsSorter: alpha
+
+openapi:
+  servers:
+    - url: "http://localhost:8080"
+      description: "API Gateway Server"
+    - url: "http://localhost:8081"
+      description: "LOCAL ENV"
