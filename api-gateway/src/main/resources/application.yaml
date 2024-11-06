@@ -1,0 +1,46 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: user-service
+          uri: ${user.service.url}
+          predicates:
+            - Path=/api/v1/user/**
+        - id: employee-service
+          uri: ${employee.service.url}
+          predicates:
+            - Path=/api/v1/employee/**
+
+user:
+  service:
+    url: http://user-service:8081
+
+employee:
+  service:
+    url: http://employee-service:8082
+
+springdoc:
+  enable-native-support: true
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui/index.html
+    config-url: /v3/api-docs/swagger-config
+    operationsSorter: alpha
+    tagsSorter: alpha
+    urls:
+      - url: /v3/api-docs
+        name: API Gateway Service
+        primaryName: API Gateway Service
+      - url: /user-service/v3/api-docs
+        name: User Service
+        primaryName: User Service
+      - url: /employee-service/v3/api-docs
+        name: Employee Service
+        primaryName: Employee Service

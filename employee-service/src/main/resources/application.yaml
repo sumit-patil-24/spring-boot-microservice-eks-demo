@@ -1,0 +1,26 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: employee-service
+  datasource:
+    url: jdbc:h2:mem:testdb  # In-memory H2 database
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+springdoc:
+  api-docs:
+    path: /employee-service/v3/api-docs
+  swagger-ui:
+    path: /employee-service/swagger-ui.html
+    operationsSorter: alpha
+    tagsSorter: alpha
