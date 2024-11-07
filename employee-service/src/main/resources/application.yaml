@@ -5,7 +5,7 @@ spring:
   application:
     name: employee-service
   datasource:
-    url: jdbc:h2:file:/data/demo-db
+    url: jdbc:h2:mem:testdb  # In-memory H2 database
     driver-class-name: org.h2.Driver
     username: sa
     password: password
