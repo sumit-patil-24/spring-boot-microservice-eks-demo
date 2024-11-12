@@ -2,7 +2,7 @@ namespace: test
 replicaCount: 1
 
 image:
-  repository: "061039791346.dkr.ecr.ap-south-1.amazonaws.com/api-gateway-image"
+  repository: "021891582190.dkr.ecr.ap-south-1.amazonaws.com/api-gateway-image"
   tag: "latest"
   pullPolicy: Always
 
