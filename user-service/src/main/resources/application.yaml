@@ -19,6 +19,7 @@ spring:
       ddl-auto: update
     show-sql: true
 
+
 springdoc:
   api-docs:
     path: /user-service/v3/api-docs
