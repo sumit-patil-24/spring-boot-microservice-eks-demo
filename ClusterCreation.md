@@ -20,6 +20,12 @@ To create an EKS cluster, the following tools must be installed:
    curl --silent --location "https://github.com/weaveworks/eksctl/releases/download/latest_release/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
    sudo mv /tmp/eksctl /usr/local/bin
 
+3. **kubectl**: a command line tool for communicating with a Kubernetes cluster's control plane, using the Kubernetes API.
+   ```bash
+   curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+   sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+   kubectl version --client
+
 ## Commands for Cluster Creation
 1. **Create Cluster with EC2 Spot Instances**: To create an EKS cluster using EC2 Spot instances, specify a managed node group with Spot instances instead of the `--fargate` option.
    ```bash
