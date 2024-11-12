@@ -30,7 +30,7 @@ springdoc:
 
 openapi:
   servers:
-    - url: "http://localhost:8080"
+    - url: "http://api-gateway:8080"
       description: "API Gateway Server"
-    - url: "http://localhost:8081"
+    - url: "http://user-service:8081"
       description: "LOCAL ENV"
