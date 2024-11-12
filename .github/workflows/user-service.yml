@@ -1,4 +1,4 @@
-name: Build and Deploy API Gateway 
+name: Build and Deploy User Service
 
 on:
   push:
@@ -49,7 +49,7 @@ jobs:
           cat ~/.kube/config
           kubectl cluster-info
 
-      - name: Deploy API Gateway with Helm
+      - name: Deploy User Service with Helm
         run: |
           helm upgrade --install user-service helmcharts/user-service \
             --set image.tag=user-service-${{ github.sha }}
