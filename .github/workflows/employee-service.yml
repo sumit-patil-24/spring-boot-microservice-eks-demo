@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - 'employee-service/**'       # Trigger when files in api-gateway folder change
-      - '!helmcharts/**'        # Exclude changes in helmcharts folder
+      - 'helmcharts/employee-service/**'        
 
 jobs:
   build-and-deploy:
