@@ -32,5 +32,6 @@ COPY src/main/resources/application.yaml /app/application.yaml
 # Expose the service port
 EXPOSE 8082
 
+
 # Set the entry point to run the JAR file, including the sandbox profile
 ENTRYPOINT ["java", "-jar", "./employee-service.jar", "--spring.config.additional-location=./application.yaml"]
