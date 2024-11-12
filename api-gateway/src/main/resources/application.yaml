@@ -16,6 +16,7 @@ spring:
           predicates:
             - Path=/api/v1/employee/**
 
+
 user:
   service:
     url: http://localhost:8081
