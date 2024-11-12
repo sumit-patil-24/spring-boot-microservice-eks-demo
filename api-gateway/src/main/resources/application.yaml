@@ -18,11 +18,11 @@ spring:
 
 user:
   service:
-    url: http://localhost:8081
+    url: http://user-service:8081
 
 employee:
   service:
-    url: http://localhost:8082
+    url: http://employee-service:8082
 
 springdoc:
   enable-native-support: true
