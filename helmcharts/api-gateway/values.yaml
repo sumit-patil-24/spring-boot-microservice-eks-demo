@@ -1,0 +1,25 @@
+namespace: test
+replicaCount: 1
+
+image:
+  repository: "061039791346.dkr.ecr.ap-south-1.amazonaws.com/api-gateway-image"
+  tag: "latest"
+  pullPolicy: Always
+
+containerPort: 9090
+
+service:
+  type: NodePort
+  port: 80
+  targetPort: 8080
+
+userServiceUrl: "http://user-service:8081"
+employeeServiceUrl: "http://employee-service:8082"
+
+ingress:
+  enabled: true
+  scheme: internet-facing
+  listenPorts: '[{"HTTP": 80}]'
+  targetType: ip
+  backendProtocol: HTTP
+  servicePort: 80
