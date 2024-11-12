@@ -32,5 +32,6 @@ COPY src/main/resources/application.yaml /app/application.yaml
 # Expose the gateway port
 EXPOSE 8080
 
+
 # Set the entry point to run the JAR file, including the sandbox profile
 ENTRYPOINT ["java", "-jar", "./api-gateway.jar", "--spring.config.additional-location=./application.yaml"]
