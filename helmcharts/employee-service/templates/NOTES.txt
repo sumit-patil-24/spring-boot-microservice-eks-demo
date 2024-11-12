@@ -1,0 +1,6 @@
+{{- if .Values.ingress.enabled }}
+Ingress is enabled. You can access the application via the ingress.
+{{- else }}
+Ingress is not enabled. The application will not be accessible via ingress.
+{{- end }}
+

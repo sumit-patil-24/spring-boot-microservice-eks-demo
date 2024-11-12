@@ -1,0 +1,15 @@
+namespace: test
+replicaCount: 1
+
+image:
+  repository: "021891582190.dkr.ecr.ap-south-1.amazonaws.com/employee-service-image"
+  tag: "latest"
+  pullPolicy: Always
+
+service:
+  type: ClusterIP
+  port: 8082
+  targetPort: 8082
+
+ingress:
+  enabled: false
