@@ -26,6 +26,7 @@ WORKDIR /app
 # Copy the built JAR file from the build stage
 COPY --from=build /app/target/employee-service-0.0.1-SNAPSHOT.jar employee-service.jar
 
+
 # Optionally, copy the application.yaml only if needed (this is usually part of your build process)
 COPY src/main/resources/application.yaml /app/application.yaml
 
