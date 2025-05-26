@@ -29,7 +29,6 @@ COPY --from=build /app/target/api-gateway-0.0.1-SNAPSHOT.jar api-gateway.jar
 # Optionally, copy the application.yaml only if needed
 COPY src/main/resources/application.yaml /app/application.yaml
 
-
 # Expose the gateway port
 EXPOSE 8080
 
