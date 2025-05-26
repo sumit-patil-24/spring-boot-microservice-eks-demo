@@ -42,7 +42,7 @@ jobs:
 
       - name: Update kubeconfig
         run: |
-          aws eks update-kubeconfig --name demo-cluster --region ${{ secrets.AWS_REGION }}
+          aws eks update-kubeconfig --name demo-cluster-1 --region ${{ secrets.AWS_REGION }}
 
       - name: Check Kubernetes config
         run: |
